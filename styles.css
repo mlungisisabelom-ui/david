@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+}
+
+header {
+    background: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #1877f2;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+.search {
+    width: 300px;
+    padding: 8px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+}
+
+.nav-icons span {
+    margin-left: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.sidebar, .right-sidebar {
+    width: 20%;
+    padding: 20px;
+    position: fixed;
+    top: 70px;
+    height: calc(100% - 70px);
+    overflow-y: auto;
+}
+
+.sidebar {
+    left: 0;
+}
+
+.right-sidebar {
+    right: 0;
+}
+
+.feed {
+    width: 60%;
+    margin: 90px auto;
+}
+
+.stories {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.story {
+    width: 25%;
+    height: 150px;
+    background: #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.post-box textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.post-box button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.post {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.like-btn {
+    margin-top: 10px;
+    padding: 6px 10px;
+    background: #e4e6eb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.comment-btn, .edit-btn, .delete-btn {
+    padding: 6px 10px;
+    background: #e4e6eb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comments-section {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.comment {
+    margin-bottom: 5px;
+    padding: 5px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.comment-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.comment-input input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comment-input button {
+    padding: 5px 10px;
+    background: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.timestamp {
+    color: #666;
+    font-size: 12px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .sidebar, .right-sidebar { display: none; }
+    .feed { width: 90%; }
+}

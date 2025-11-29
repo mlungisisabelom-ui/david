@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP MAKER  </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">MAP MAKER</div>
+
+        <input type="text" placeholder="Search MAP ..." class="search">
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="feed">
+
+        <!-- STORIES -->
+        <section class="stories">
+            <div class="story">Your Story</div>
+            <div class="story">Friend 1</div>
+            <div class="story">Friend 2</div>
+            <div class="story">Friend 3</div>
+        </section>
+
+        <!-- POST BOX -->
+        <section class="post-box">
+            <textarea id="postText" placeholder="What's on your mind?"></textarea>
+            <button onclick="addPost()">Post</button>
+        </section>
+
+        <!-- POSTS -->
+        <div id="postContainer"></div>
+
+        <!-- MODAL FOR EDITING POSTS -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeEditModal()">&times;</span>
+                <h3>Edit Post</h3>
+                <textarea id="editText"></textarea>
+                <button onclick="saveEdit()">Save</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="right-sidebar">
+        <h3>Contacts</h3>
+        <p>🟢 Friend A</p>
+        <p>🟢 Friend B</p>
+        <p>🟢 Friend C</p>
+    </aside>
+
+<script src="script.js"></script>
+</body>
+</html>
